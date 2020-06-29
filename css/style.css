@@ -1,0 +1,704 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+:root{
+    --primary-dark: #006ecc;
+    --primary-light: #33a1ff;
+    --secondary-dark: #cdd6e6;
+    --secondary-light: white;
+    --success-dark: #3cb690;
+    --success-light: #82d6bc;
+    --info-dark: #1d9fff;
+    --info-light: #83cbff;
+    --warning-dark: #ffad0a;
+    --warning-light: #ffcf70;
+    --danger-dark: #e60014;/*#ee283c original*/
+    --danger-light: #f68692;
+    --light-dark: #cdd6e6;
+    --light-light: white;
+    --dark-dark: #0a081f;
+    --dark-light: #241e6f;
+    --neutral-dark: #e6e6e6;
+    --neutral-light: white;
+    --white-dark: #e6e6e6;
+    --white-light: white;
+    --blue: #008aff;
+    --indigo: #6e00ff;
+    --purple: #510FA8;
+    --pink: #f074ad;
+    --red: #f25767;
+    --orange: #FFBE3D;
+    --yellow: #ffc431;
+    --green: #5cc9a7;
+    --teal: #50b5ff;
+    --cyan: #4bd6e5;
+    --white: #FFF;
+    --gray: #718096;
+    --gray-dark: #2D3748;
+    --primary: #008aff;
+    --secondary: #EFF2F7;
+    --success: #5cc9a7;
+    --info: #50b5ff;
+    --warning: #FFBE3D;
+    --danger: #f25767;
+    --light: #EFF2F7;
+    --dark: #171347;
+    --neutral: #FFF;
+    --white: #FFFFFF;
+    --pretopontofrio:rgb(48, 48, 48);
+    --pretoamerica:#333333;
+    --cinzaamerica:#666666;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    scroll-behavior: smooth;
+   
+}
+body{
+    background: var(--pretopontofrio);
+}
+.barra{
+    border-bottom: 1px solid #666666;
+    margin: 30px auto;
+}
+.container{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+.clear{
+    clear: both;
+}
+.borda{
+    border: 1px red solid;
+}
+h1,h2,h3,h3{
+    color:var(--white);
+}
+ul{
+    list-style: none;
+}
+a{
+    display: block;
+    text-decoration: none;
+}
+ 
+
+header{
+    width: 100%;
+    height: auto;
+    position: -webkit-sticky;
+    position: sticky;
+    top:-86px;
+    z-index: 1;
+
+    
+}
+
+.cabecalho{
+    
+    background-color: var(--danger-dark);
+    border-bottom: 1px var(--secondary-dark) solid; 
+    box-shadow: 1px 1px 1px var(--gray);
+}
+.logo{
+   
+    height: 80px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    padding-top: 20px;
+ 
+}
+.logo h1{
+    background-image: url("../img/Logobranca.png"); 
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+    width:320px;
+   margin: 0 auto;
+    
+    
+}
+
+.logo span{
+ color: var(--pretoamerica);
+  
+}
+
+.menu li{
+    display: inline-block;
+    padding: 0.7em;
+    
+}
+.menu ul{
+    height: 55px;
+    text-align: center;
+     
+}
+.menu a{
+    font-size: 15px;
+    color: var(--white);
+    font-weight: bold;
+     
+}
+.menu a:hover{
+    color: var(--gray);
+    text-decoration: none;
+}
+/*------------MENU DROPDOWN*/
+ 
+.dropbtn {
+    cursor: pointer;
+    font-size: 15px;
+    color: var(--white);
+    font-weight: bold;
+    outline: none;
+    background: none;
+    border: none;
+    background-image: url("../img/icons8-cardápio.svg");
+    background-repeat: no-repeat;
+    padding:10px 10px 10px 40px;
+    background-size:35px 40px;
+  
+}
+.dropbtn:hover{
+     color: var(--gray);
+      
+}
+ .dropdown-content .h2categorias{
+    background-color: var(--danger-dark);
+    line-height:56px;
+    text-align:center;
+    box-shadow:1px 1px 10px 1px black;
+    position: relative;
+ }
+ .dropdown-content .iconefechar{
+    position:absolute;
+    right:10px;
+    top:15px;
+ }
+  .dropdown-content {
+        position: fixed;
+		top: 0px;
+		bottom: 0;
+		left: 0;
+		overflow: hidden;
+		width: 0px;
+		border-top: 1px solid #c6d0da;
+		background: white;
+		-webkit-transform: translateX(-60px);
+		-moz-transform: translateX(-60px);
+		transform: translateX(-60px);
+		-webkit-transition: -webkit-transform 0.3s, width 0.3s;
+		-moz-transition: -moz-transform 0.3s, width 0.3s;
+        z-index:1;
+   
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    
+  }
+  
+  .dropdown a:hover {
+      background-color: rgba(0,0,0,0.2);
+      border-radius: 5px;
+     
+    }
+  
+  .show {
+    position: fixed;
+    top: 0px;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    width: 400px;
+    border-top: 1px solid #c6d0da;
+    background: white;
+    -webkit-transform: translateX(-60px);
+    -moz-transform: translateX(-60px);
+    transform: translateX(-60px);
+    -webkit-transition: -webkit-transform 0.3s, width 0.3s;
+    -moz-transition: -moz-transform 0.3s, width 0.3s;
+    z-index:2;
+  }
+  .overlay{
+      position: fixed;
+      top:0px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.7);
+    z-index: 1;
+  }
+  
+
+  
+/*----------------*/
+
+/*----------------CARDS DESTAQUES*/
+.box-cards-destaques{
+    overflow: hidden;
+    margin-top: -40px;
+    display: flex;
+    justify-content: space-around;
+}
+.cards-destaques{
+    text-align: center;
+    padding: 5px;
+    border:1px var(--secondary-dark) solid;
+    border-radius: 5px;
+    margin: 15px 15px;
+}
+.cards-destaques a{
+    display: flex;
+    align-items: center;
+   
+}
+.cards-destaques a:hover{
+    transform: scale(1.02);
+    transition: linear 100ms;
+}
+.img-cards{
+    margin: auto;
+    width: 300px;
+    height: 150px;
+    
+     
+}
+.img-cards img{
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    border-radius: 18px;
+    
+}
+.texto-cards{
+   
+    color: var(--white);
+}
+.texto-cards h2{
+    font-size: 1em;
+}
+.texto-cards h3{
+    margin: auto;
+    width: fit-content;
+    padding: 3px;
+    font-size: 1em;
+    background-color: var(--danger-dark);
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+/*----------------*/
+.subtitulos{
+    font-size: 2em;
+    line-height: 100px;
+    padding: 15px;
+    margin: 25px auto;
+    /**/
+    font-weight: normal;
+}
+/*--------CARD COMPRAR*/
+.card-venda{
+    margin: 25px 20px;
+    width: 300px;
+    height: 400px;
+    border-radius: 10px;
+    background-color: var(--light);
+    box-shadow: 4px 4px 10px 0px black;
+}
+.categoria{
+   
+    margin-bottom: 10px;
+    line-height: 2em;
+    /* padding-left: 6px; */
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+
+}
+.img-venda img{
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+     
+}
+.preco,
+.descricaopro{
+    padding: 10px;
+    
+}
+.descricaopro > h4{
+ font-weight: normal;
+ color: var(--cinzaamerica);
+}
+.preco > h4{
+    font-weight: bold;
+     margin-top: 15px;
+    font-size: 2em;
+    line-height: 1em;
+    color: var(--pretoamerica);
+    }
+.preco h3{
+    text-align: center;
+    margin: auto;
+    padding: 3px;
+    font-size: 1em;
+    background-color: var(--danger-dark);
+    border-radius: 5px;
+    margin-top: 30px;
+}
+.box-maisvendidos{
+    
+
+    display: flex;
+    
+}
+.card-venda a{
+    transform: scale(0.99);
+    color: var(--gray-dark);
+}
+.card-venda a:hover{
+    transform: scale(1);
+    transition: linear 120ms;
+}
+footer{
+    padding-top:25px;
+    margin-top:40px;
+     padding-bottom: 25px;
+    background-color: var(--secondary);
+    width: 100%;
+    box-shadow: inset -1px -7px 16px 0px black;
+}
+.rodape{  
+    display: flex;
+    justify-content: space-between;
+    
+    }
+.rodapeesq > .logo{
+    padding-top:35px;
+    padding-bottom:75px;
+}
+.rodapeesq{
+    
+    border-right:1px #c6c6c6 solid;
+    width: 50%;
+}
+.rodapedir{
+    width: 50%;
+    text-align: center;
+    padding-top:15px;
+}
+.rodapedir h2{
+    text-transform: uppercase;
+    font-size: 1em;
+    color: var(--gray-dark);
+
+
+}
+.rodapedir img{
+    background-color:#676767;
+    margin-top:20px;
+    border-radius:5px;
+    box-shadow:3px 4px 11px 3px black;
+  }
+#aboutus {
+    width: 70%;
+    margin: auto;    
+    padding:15px;
+    }
+.upfoot{
+    width: 100%;
+}
+
+.upfoot h3{
+    background-image: url(../img/footerred.png);
+    background-size: 100% 100%;
+    height:150px;
+    text-align:center;
+    margin-bottom:-41px;
+    padding-top:120px;
+    font-weight:normal;
+    font-size:1em;
+    
+}
+.formaspagamento h2{
+    color:var(--pretoamerica);
+    text-align:center;
+    border-top:1px #c6c6c6 solid;
+    padding:15px;
+    margin-top:30px;
+}
+.boxformapagamentos{
+    display: flex;
+    justify-content:space-around;
+    margin-bottom:30px;
+}
+.boxformapagamentos img{
+    width:30%;
+    border: 1px solid #c6c6c6;
+    border-radius:5px;
+    padding:3px;
+
+}
+.box-banners{
+    text-align: center;
+    margin:20px auto;
+    background-color:var(--pretopontofrio);
+    height:500px;
+    
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    box-shadow:3px 4px 11px 3px black;
+}
+ /*PARA BANNERS------------------------*/
+.box-banners h2{
+    font-size:60px;
+    text-transform:uppercase;
+    font-weight:bold;
+}
+.box-banners h3{
+    font-size:30px;
+    font-weight:normal;
+    text-transform:capitalize;
+    
+    }
+
+.box-banners > a{
+    color:var(--white);
+    border:1px #c4c4c4 solid;
+    border-radius:2px;
+    padding:10px;
+    margin-top:50px;
+}
+.box-banners > a:hover{
+     border:1px var(--danger-dark) solid;
+     background-color: rgba(0,0,0,0.3);
+     transform:scale(1.02);
+}
+
+/*------------------MAIS PROCURADOS*/
+.box-mais-procuradas{
+    display: flex;
+    width:100%;
+    margin: 10px auto; 
+    justify-content:space-between;
+}
+
+.bola{
+   
+    width:200px;
+    height:200px; 
+    margin:auto;
+    
+    
+}
+.bola .box-bola{
+    
+width:100%;   
+height:100%;
+border-radius: 100%;
+border: 2px #c4c4c4 solid;
+box-shadow:3px 4px 11px 3px black;
+overflow:hidden;
+}
+.box-bola img{  
+width:100%;   
+height:100%;
+border-radius: 100%;
+ 
+}
+.box-bola img:hover{
+    transform:scale(1.08);
+    transition:linear 250ms;
+}
+.bola h4{
+    margin-top: 5px;
+    text-align:center;
+    color:var(--white)
+}
+
+
+/*-------------------------*/
+
+@media (max-width: 1024px) {
+    /* Selectors and styles affecting screens UP TO 979px (Desktop) */
+.cards-destaques a{
+    display: block;
+    align-items: center;      
+}
+.card-venda{
+    margin: 15px;
+    width: 300px;
+    height: 380px;
+}
+}
+@media (max-width: 979px) {
+    /* Selectors and styles affecting screens UP TO 979px (Desktop) */
+    
+}
+  
+@media (max-width: 768px) {
+      /* Selectors and styles affecting screens UP TO 767px (Tablet) */
+.subtitulos{
+    font-size: 1.5em;
+    line-height:50px;
+    padding:5px;
+}
+.box-cards-destaques{
+    display:block;
+    margin-left: auto;    
+}
+.cards-destaques a{
+    display: flex;
+    align-items: center;    
+}
+.box-maisvendidos{
+    display: flex;   
+    flex-wrap: wrap;
+    justify-content: center;
+        
+}
+.dropbtn{
+    text-indent: -9999px;
+       
+}
+.card-venda{
+    margin: 15px 10px;
+    width: 300px;
+    height: 400px;
+}
+.upfoot h3{
+    height: 120px;
+    text-align: center;
+    margin-bottom: -41px;
+    padding-top: 98px;
+    font-weight: normal;
+    font-size: 0.7em;
+}
+.box-banners{
+    height: 300px;
+}
+.box-banners h2{
+    font-size:30px;
+
+}
+.box-banners h3{
+    font-size:15px;
+   
+}
+}
+
+@media (max-width: 640px){
+.card-venda{
+        
+    margin: 15px;
+    width: 250px;
+     height: 390px;
+}
+.rodape{
+    display: block;
+}
+.rodapeesq,
+.rodapedir{
+    width: 100%;
+    margin: 0 auto;
+}
+#aboutus{
+    width: 90%;
+}
+.formaspagamento h2{
+    font-size: 1em;
+    width: 80%;
+    margin: 20px auto;
+    padding-top: 30px;
+    height: 50px;
+}
+.boxformapagamentos img{
+    width: 80%;
+    height: 100px;
+    margin-top: 10px;
+     
+ }
+ .boxformapagamentos{
+     flex-wrap: wrap;
+     
+ }
+ .box-mais-procuradas{
+     flex-wrap: wrap;
+ }
+ .bola{
+    
+    width:150px;
+    height:150px;
+    border-radius:100%;
+    margin:30px auto;
+    
+}
+}
+#main{
+    
+    
+    display: none;
+    border: 5px #c4c4c4 solid ;
+    width: 90%;
+    height: 100vh;
+    margin: auto;
+
+}
+
+
+/*-----------------------------------------*/
+@media(max-width:560px){
+.card-venda{
+    margin: 15px;
+    width: 40%;
+    height:370px;
+}
+}
+  
+@media (max-width: 480px) {
+      /* Selectors and styles affecting screens UP TO 480px (Phone) */
+
+.cards-destaques{
+    width: 80%;
+    margin:15px auto
+}
+.menu .menucat{
+    display: none;
+    line-height: 1em;
+}
+.menu a{
+    font-size: 0.8em;
+}
+.show{
+    width: 300px;
+    }
+.card-venda{
+    margin: 15px 10px;
+    width: 300px;
+    height: 400px;
+}
+.upfoot {
+    display: none;   
+}
+}
+  
+@media (max-width:320px) 
+{ /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ 
+.cards-destaques{
+    width: 80%;
+    margin:15px auto;
+        
+}
+      
+}
